@@ -4,10 +4,8 @@ WORKDIR /app
 
 # Install project dependencies
 COPY ./requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Install pytest
-RUN pip install --no-cache-dir pytest
+RUN /bin/sh -c "pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt"
 
 COPY . .
 
