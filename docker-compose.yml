@@ -4,8 +4,8 @@ services:
   app:
     build:
       context: .
-    command: pytest
       dockerfile: Dockerfile
+      command: pytest
     ports:
       - 8000:8000
     volumes:
