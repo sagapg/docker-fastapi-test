@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8000:8000
-    command: pytest
     volumes:
       - ./data:/app/data
+    command: pytest
 
 
 
