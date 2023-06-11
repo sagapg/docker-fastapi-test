@@ -1,16 +1,9 @@
 version: '3'
-
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  fastapi:
+    image: fastapi-app
     ports:
       - 8000:8000
     volumes:
       - ./data:/app/data
-    
-
-
-
 
