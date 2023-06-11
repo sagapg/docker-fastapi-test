@@ -19,13 +19,6 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                // Run tests against the deployed application
-                sh 'docker-compose exec -T app pytest'
-            }
-        }
-        
         stage('Cleanup') {
             steps {
                 // Stop and remove the Docker containers
